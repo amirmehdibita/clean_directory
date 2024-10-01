@@ -6,6 +6,7 @@ from loguru import logger
 
 from src.data import DATA_DIR
 from src.utils.io import read_json
+import sys
 
 
 class OrganizeFiles:
@@ -52,5 +53,5 @@ class OrganizeFiles:
 
 if __name__ == "__main__":
     org_files = OrganizeFiles()
-    org_files("/mnt/c/Users/admin/Desktop/tmp_directory")
+    org_files(sys.argv[1])
     logger.info("Done!")
